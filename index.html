@@ -1,0 +1,1900 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glaucia Braga — Esteticista Cosmetóloga</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --rose: #C17B6F;
+      --rose-light: #E8C5BE;
+      --rose-pale: #F7EDEA;
+      --cream: #FAF6F2;
+      --dark: #1C1410;
+      --text: #2A1D18;
+      --muted: #665050;
+      --gold: #B89A6A;
+      --white: #FFFFFF;
+      --border: rgba(193, 123, 111, 0.2);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--white);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(250, 246, 242, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 48px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--dark);
+      letter-spacing: 0.02em;
+    }
+
+    .nav-logo span {
+      color: var(--rose);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--rose);
+    }
+
+    .nav-cta {
+      background: var(--rose);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      padding: 10px 22px;
+      border-radius: 40px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .nav-cta:hover {
+      background: var(--text);
+      transform: translateY(-1px);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-top: 64px;
+    }
+
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 64px 80px 80px;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+
+    .hero-tag::before {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 64px;
+      font-weight: 300;
+      line-height: 1.1;
+      color: var(--dark);
+      margin-bottom: 24px;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--rose);
+    }
+
+    .hero-subtitle {
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--muted);
+      line-height: 1.8;
+      max-width: 360px;
+      margin-bottom: 40px;
+    }
+
+    .hero-creds {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 48px;
+      padding-left: 16px;
+      border-left: 2px solid var(--rose-light);
+    }
+
+    .hero-cred {
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 300;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-cred strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .btn-rose {
+      background: var(--rose);
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      padding: 14px 28px;
+      border-radius: 40px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 24px rgba(193, 123, 111, 0.25);
+    }
+
+    .btn-rose:hover {
+      background: var(--dark);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(28, 20, 16, 0.15);
+    }
+
+    .btn-outline {
+      color: var(--rose);
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      padding: 14px 28px;
+      border-radius: 40px;
+      border: 1px solid var(--rose-light);
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--rose);
+      background: var(--rose-pale);
+    }
+
+    .hero-right {
+      background: var(--rose-pale);
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-photo-area {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      position: relative;
+    }
+
+    .hero-photo-img {
+      width: 320px;
+      height: 480px;
+      object-fit: cover;
+      border-radius: 200px 200px 16px 16px;
+      box-shadow: 0 24px 60px rgba(193, 123, 111, 0.25);
+      border: 4px solid var(--white);
+      position: relative;
+    }
+
+    .hero-photo-text {
+      position: absolute;
+      bottom: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 13px;
+      font-style: italic;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .photo-icon {
+      width: 64px;
+      height: 64px;
+      opacity: 0.4;
+    }
+
+    .hero-stat {
+      position: absolute;
+      background: var(--white);
+      border-radius: 16px;
+      padding: 16px 20px;
+      box-shadow: 0 8px 32px rgba(28, 20, 16, 0.08);
+    }
+
+    .hero-stat-1 {
+      top: 120px;
+      left: 32px;
+    }
+
+    .hero-stat-2 {
+      top: 200px;
+      right: 32px;
+    }
+
+    .hero-stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 400;
+      color: var(--rose);
+      line-height: 1;
+    }
+
+    .hero-stat-label {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* ── TRUST BAR ── */
+    .trust-bar {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 24px 80px;
+      display: flex;
+      gap: 0;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0 40px;
+      border-right: 1px solid var(--border);
+    }
+
+    .trust-item:last-child {
+      border-right: none;
+    }
+
+    .trust-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--rose);
+      flex-shrink: 0;
+    }
+
+    .trust-text {
+      font-size: 13px;
+      color: var(--text);
+      letter-spacing: 0.06em;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    /* ── SOBRE ── */
+    .sobre {
+      padding: 100px 80px;
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .sobre-left {
+      position: relative;
+    }
+
+    .sobre-photo-img {
+      width: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      border-radius: 24px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 16px 40px rgba(193, 123, 111, 0.15);
+    }
+
+    .sobre-badge {
+      position: absolute;
+      bottom: 32px;
+      right: -24px;
+      background: var(--white);
+      border-radius: 20px;
+      padding: 16px 24px;
+      box-shadow: 0 8px 32px rgba(28, 20, 16, 0.1);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .sobre-badge-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--rose-pale);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sobre-badge-text strong {
+      display: block;
+      font-size: 13px;
+      color: var(--dark);
+      font-weight: 500;
+    }
+
+    .sobre-badge-text span {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .sobre-right {}
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .section-label::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 44px;
+      font-weight: 300;
+      line-height: 1.2;
+      color: var(--dark);
+      margin-bottom: 24px;
+    }
+
+    .section-title em {
+      font-style: italic;
+      color: var(--rose);
+    }
+
+    .sobre-text {
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--muted);
+      line-height: 1.9;
+      margin-bottom: 32px;
+    }
+
+    .formacao-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .formacao-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 16px;
+      background: var(--rose-pale);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    .formacao-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--rose);
+      margin-top: 4px;
+      flex-shrink: 0;
+    }
+
+    .formacao-text {
+      font-size: 13px;
+      color: var(--text);
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    .formacao-text small {
+      display: block;
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    /* ── SERVIÇOS ── */
+    .servicos {
+      padding: 100px 80px;
+      background: var(--cream);
+    }
+
+    .servicos-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .servicos-header .section-label {
+      color: var(--gold);
+    }
+
+    .servicos-header .section-label::before {
+      background: var(--gold);
+    }
+
+    .servicos-header .section-title {
+      color: var(--dark);
+      font-size: 48px;
+    }
+
+    .servicos-header .section-title em {
+      color: var(--rose);
+    }
+
+    .servicos-sub {
+      font-size: 14px;
+      color: var(--muted);
+      font-weight: 300;
+      max-width: 480px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    .servicos-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .servico-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 40px 32px;
+      transition: all 0.3s ease;
+      position: relative;
+      cursor: default;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 20px rgba(193, 123, 111, 0.04);
+    }
+
+    .servico-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 40px rgba(193, 123, 111, 0.12);
+      border-color: var(--rose-light);
+    }
+
+    .servico-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 48px;
+      font-weight: 300;
+      color: var(--rose-pale);
+      position: absolute;
+      top: 24px;
+      right: 28px;
+      line-height: 1;
+      z-index: 0;
+    }
+
+    .servico-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--rose-pale);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .servico-name {
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 8px;
+      letter-spacing: 0.01em;
+      position: relative;
+      z-index: 1;
+    }
+
+    .servico-desc {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 300;
+      line-height: 1.7;
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .servico-price {
+      font-size: 13px;
+      color: var(--rose);
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      position: relative;
+      z-index: 1;
+    }
+
+    .servicos-cta {
+      text-align: center;
+      margin-top: 64px;
+    }
+
+    .servicos-note {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 16px;
+      font-weight: 300;
+    }
+
+    /* ── PORTFÓLIO ── */
+    .portfolio {
+      padding: 100px 80px;
+    }
+
+    .portfolio-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 48px;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .portfolio-item {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .porto-imgs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 180px;
+    }
+
+    .porto-half {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .porto-before-bg {
+      background: #D3CBC6;
+    }
+
+    .porto-after-bg {
+      background: var(--rose-pale);
+    }
+
+    .porto-label-small {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .porto-before-bg .porto-label-small {
+      color: #6B5E58;
+    }
+
+    .porto-after-bg .porto-label-small {
+      color: var(--rose);
+    }
+
+    .porto-divider {
+      width: 1px;
+      height: 60%;
+      background: rgba(255, 255, 255, 0.5);
+      align-self: center;
+    }
+
+    .porto-info {
+      padding: 14px 16px;
+      background: var(--white);
+    }
+
+    .porto-procedure {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+
+    .porto-sessions {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    /* ── DEPOIMENTOS ── */
+    .depoimentos {
+      padding: 100px 80px;
+      background: var(--rose-pale);
+    }
+
+    .depo-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .depo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .depo-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 32px;
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 20px rgba(193, 123, 111, 0.04);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .depo-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(193, 123, 111, 0.1);
+    }
+
+    .depo-stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 16px;
+    }
+
+    .star {
+      width: 12px;
+      height: 12px;
+      background: var(--gold);
+      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    }
+
+    .depo-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16px;
+      font-style: italic;
+      color: var(--text);
+      line-height: 1.7;
+      flex: 1;
+      margin-bottom: 20px;
+    }
+
+    .depo-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+
+    .depo-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--rose-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--rose);
+      flex-shrink: 0;
+    }
+
+    .depo-name {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--dark);
+    }
+
+    .depo-since {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    /* ── AGENDAMENTO ── */
+    .agendamento {
+      padding: 100px 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .agendamento-left {}
+
+    .agendamento-right {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 48px;
+      border: 1px solid var(--border);
+      box-shadow: 0 20px 60px rgba(193, 123, 111, 0.08);
+    }
+
+    .form-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 400;
+      color: var(--dark);
+      margin-bottom: 28px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      padding: 14px 18px;
+      background: var(--white);
+      border: 1px solid rgba(193, 123, 111, 0.25);
+      border-radius: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: var(--text);
+      font-weight: 400;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+
+    .form-input::placeholder,
+    .form-textarea::placeholder {
+      color: #a39592;
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      border-color: var(--rose);
+      box-shadow: 0 0 0 3px rgba(193, 123, 111, 0.15);
+    }
+
+    .form-select {
+      appearance: none;
+      cursor: pointer;
+    }
+
+    .form-textarea {
+      height: 100px;
+      resize: none;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .form-submit {
+      width: 100%;
+      background: var(--rose);
+      color: var(--white);
+      border: none;
+      padding: 16px;
+      border-radius: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      margin-top: 8px;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .form-submit:hover {
+      background: var(--dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(28, 20, 16, 0.1);
+    }
+
+    .form-note {
+      font-size: 11px;
+      color: var(--muted);
+      text-align: center;
+      margin-top: 12px;
+    }
+
+    .agenda-info {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .agenda-info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .agenda-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--rose-pale);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .agenda-info-text strong {
+      display: block;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--dark);
+      margin-bottom: 2px;
+    }
+
+    .agenda-info-text span {
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 300;
+      line-height: 1.6;
+    }
+
+    /* ── LOCALIZAÇÃO ── */
+    .localizacao {
+      padding: 80px;
+      background: var(--dark);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .loc-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 40px;
+      font-weight: 300;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+
+    .loc-title em {
+      font-style: italic;
+      color: var(--rose-light);
+    }
+
+    .loc-sub {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.4);
+      margin-bottom: 40px;
+      line-height: 1.7;
+    }
+
+    .loc-details {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .loc-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .loc-icon {
+      width: 36px;
+      height: 36px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .loc-item-title {
+      font-size: 12px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.5);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .loc-item-val {
+      font-size: 14px;
+      color: var(--white);
+      font-weight: 300;
+      line-height: 1.6;
+    }
+
+    .loc-map {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      height: 320px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .loc-map:hover {
+      background: rgba(255, 255, 255, 0.07);
+    }
+
+    .map-pin-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--rose);
+      border-radius: 50% 50% 50% 0;
+      transform: rotate(-45deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .map-pin-inner {
+      width: 16px;
+      height: 16px;
+      background: var(--white);
+      border-radius: 50%;
+      transform: rotate(45deg);
+    }
+
+    .loc-map-label {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    .loc-map-cta {
+      font-size: 12px;
+      color: var(--rose-light);
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      margin-top: 4px;
+    }
+
+    /* ── WHATSAPP FLOAT ── */
+    .wpp-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 200;
+      background: #25D366;
+      color: var(--white);
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      animation: wpp-pulse 2s infinite;
+    }
+
+    .wpp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.5);
+    }
+
+    @keyframes wpp-pulse {
+
+      0%,
+      100% {
+        box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+      }
+
+      50% {
+        box-shadow: 0 4px 28px rgba(37, 211, 102, 0.6);
+      }
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #120E0C;
+      padding: 40px 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .footer-logo span {
+      color: var(--rose-light);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer-links a {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.3);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .footer-copy {
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* ── ANIMAÇÕES ── */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-tag {
+      animation: fadeUp 0.6s ease both;
+    }
+
+    .hero-title {
+      animation: fadeUp 0.6s 0.1s ease both;
+    }
+
+    .hero-subtitle {
+      animation: fadeUp 0.6s 0.2s ease both;
+    }
+
+    .hero-creds {
+      animation: fadeUp 0.6s 0.3s ease both;
+    }
+
+    .hero-btns {
+      animation: fadeUp 0.6s 0.4s ease both;
+    }
+
+    /* ── RESPONSIVO ── */
+    @media (max-width: 900px) {
+      nav {
+        padding: 0 24px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        display: flex;
+        flex-direction: column-reverse;
+        padding-top: 64px;
+      }
+
+      .hero-right {
+        display: flex;
+        background: none;
+        padding: 40px 24px 0;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .hero-stat {
+        display: none;
+      }
+      
+      .hero-photo-img {
+        width: 100%;
+        max-width: 300px;
+        aspect-ratio: 4/5;
+        border-radius: 24px;
+        box-shadow: 0 16px 40px rgba(193, 123, 111, 0.15);
+        border: none;
+      }
+
+      .hero-left {
+        padding: 32px 24px 64px;
+        align-items: center;
+        text-align: center;
+      }
+
+      .hero-tag {
+        margin: 0 auto 24px;
+      }
+
+      .hero-title {
+        font-size: 40px;
+        line-height: 1.15;
+      }
+
+      .hero-subtitle {
+        margin: 0 auto 32px;
+      }
+
+      .hero-creds {
+        border-left: none;
+        padding-left: 0;
+        align-items: center;
+      }
+
+      .hero-btns {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+      }
+
+      .hero-btns .btn-rose,
+      .hero-btns .btn-outline {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .sobre,
+      .agendamento,
+      .localizacao {
+        grid-template-columns: 1fr;
+        padding: 60px 24px;
+        gap: 40px;
+      }
+
+      .sobre-left {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 24px;
+      }
+      
+      .sobre-photo-img {
+        max-width: 300px;
+      }
+      
+      .sobre-badge {
+        display: none;
+      }
+
+      .sobre-right {
+        text-align: center;
+      }
+      
+      .section-label {
+        margin: 0 auto 16px;
+      }
+
+      .servicos,
+      .portfolio,
+      .depoimentos {
+        padding: 60px 24px;
+      }
+
+      .servicos-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .depo-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-bar {
+        flex-wrap: wrap;
+        padding: 16px 24px;
+        gap: 8px;
+      }
+
+      .trust-item {
+        padding: 6px 16px;
+        border: none;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+        padding: 32px 24px;
+      }
+
+      .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">Glaucia <span>Braga</span></div>
+    <ul class="nav-links">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#servicos">Procedimentos</a></li>
+      <li><a href="#portfolio">Portfólio</a></li>
+      <li><a href="#depoimentos">Depoimentos</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <a href="https://wa.me/5535999999999?text=Olá%20Glaucia!%20Gostaria%20de%20agendar%20um%20procedimento."
+      class="nav-cta" target="_blank">Agendar agora</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="hero-tag">Esteticista Cosmetóloga</div>
+      <h1 class="hero-title">Sua pele merece<br>cuidado <em>especializado</em></h1>
+      <p class="hero-subtitle">Procedimentos estéticos personalizados com técnica, ciência e sensibilidade. Resultados
+        reais para uma pele saudável e renovada.</p>
+      <div class="hero-creds">
+        <div class="hero-cred"><strong>Esteticista Cosmetóloga</strong></div>
+        <div class="hero-cred"><strong>Pós-Graduanda</strong> em Eletroterapia de Precisão</div>
+        <div class="hero-cred"><strong>Pós-Graduanda</strong> em Estética Avançada</div>
+      </div>
+      <div class="hero-btns">
+        <a href="https://wa.me/5535999999999?text=Olá%20Glaucia!%20Gostaria%20de%20agendar%20um%20procedimento."
+          class="btn-rose" target="_blank">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path
+              d="M13.5 2.5C12.1 1.1 10.2 0.3 8.1 0.3c-4.3 0-7.8 3.5-7.8 7.8 0 1.4.4 2.7 1 3.9L.3 15.7l3.8-.9c1.1.6 2.4.9 3.6.9h.1c4.3 0 7.8-3.5 7.8-7.8-.2-2.1-1-4-2.6-5.4zm-5.4 12c-1.1 0-2.2-.3-3.2-.9l-.2-.1-2.2.6.6-2.2-.2-.2C2.3 10.6 2 9.5 2 8.4c0-3.4 2.8-6.2 6.2-6.2 1.7 0 3.2.6 4.4 1.8 1.2 1.2 1.8 2.7 1.8 4.4-.1 3.3-2.9 6.1-6.3 6.1zm3.4-4.6c-.2-.1-1.1-.5-1.3-.6-.2-.1-.3-.1-.5.1-.1.2-.5.6-.6.8-.1.1-.2.1-.4 0-.2-.1-.8-.3-1.5-.9-.6-.5-1-1.2-1.1-1.4-.1-.2 0-.3.1-.4l.3-.3c.1-.1.1-.2.2-.3 0-.1 0-.2 0-.3-.1-.1-.5-1.1-.6-1.5-.2-.4-.3-.3-.5-.3h-.4c-.1 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.3c.1.1 1.6 2.4 3.8 3.4.5.2.9.4 1.3.5.5.2 1 .1 1.4.1.4-.1 1.3-.5 1.5-1 .2-.5.2-.9.1-1-.1-.1-.2-.1-.3-.2z"
+              fill="white" />
+          </svg>
+          Agendar pelo WhatsApp
+        </a>
+        <a href="#servicos" class="btn-outline">Ver procedimentos</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-stat hero-stat-1">
+        <div class="hero-stat-num">500+</div>
+        <div class="hero-stat-label">Clientes atendidas</div>
+      </div>
+      <div class="hero-stat hero-stat-2">
+        <div class="hero-stat-num">5★</div>
+        <div class="hero-stat-label">Avaliação média</div>
+      </div>
+      <div class="hero-photo-area">
+        <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=600&q=80" alt="Glaucia Braga Especialista" class="hero-photo-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="trust-item">
+      <div class="trust-dot"></div><span class="trust-text">Cosmetóloga certificada</span>
+    </div>
+    <div class="trust-item">
+      <div class="trust-dot"></div><span class="trust-text">Produtos profissionais</span>
+    </div>
+    <div class="trust-item">
+      <div class="trust-dot"></div><span class="trust-text">Ambiente esterilizado</span>
+    </div>
+    <div class="trust-item">
+      <div class="trust-dot"></div><span class="trust-text">Atendimento personalizado</span>
+    </div>
+    <div class="trust-item">
+      <div class="trust-dot"></div><span class="trust-text">Resultados comprovados</span>
+    </div>
+  </div>
+
+  <!-- SOBRE -->
+  <section class="sobre" id="sobre">
+    <div class="sobre-left">
+      <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=600&q=80" alt="Glaucia Braga" class="sobre-photo-img">
+      <div class="sobre-badge">
+        <div class="sobre-badge-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M10 2l2.4 5H18l-4.2 3.1 1.6 5L10 12.3 4.6 15.1l1.6-5L2 7h5.6L10 2z" fill="#C17B6F" />
+          </svg>
+        </div>
+        <div class="sobre-badge-text">
+          <strong>Especialista certificada</strong>
+          <span>Cosmetologia & Estética Avançada</span>
+        </div>
+      </div>
+    </div>
+    <div class="sobre-right">
+      <div class="section-label">Sobre mim</div>
+      <h2 class="section-title">Glaucia <em>Braga</em></h2>
+      <p class="sobre-text">
+        Sou esteticista cosmetóloga com formação especializada em procedimentos estéticos faciais e corporais. Meu
+        compromisso é oferecer um atendimento técnico, humanizado e com resultados reais — porque cada pele é única e
+        merece um cuidado exclusivo.
+      </p>
+      <p class="sobre-text">
+        Estou em constante atualização para trazer as técnicas mais modernas e seguras para as minhas clientes. Aqui
+        você encontra um ambiente acolhedor e profissional, onde se sentirá cuidada em cada detalhe.
+      </p>
+      <ul class="formacao-list">
+        <li class="formacao-item">
+          <div class="formacao-dot"></div>
+          <div class="formacao-text">
+            Esteticista Cosmetóloga
+            <small>Graduação em Cosmetologia e Estética</small>
+          </div>
+        </li>
+        <li class="formacao-item">
+          <div class="formacao-dot"></div>
+          <div class="formacao-text">
+            Pós-Graduanda em Eletroterapia de Precisão
+            <small>Em andamento</small>
+          </div>
+        </li>
+        <li class="formacao-item">
+          <div class="formacao-dot"></div>
+          <div class="formacao-text">
+            Pós-Graduanda em Estética Avançada
+            <small>Em andamento</small>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section class="servicos" id="servicos">
+    <div class="servicos-header">
+      <div class="section-label">O que ofereço</div>
+      <h2 class="section-title">Procedimentos <em>especializados</em></h2>
+      <p class="servicos-sub">Cada procedimento é realizado com produtos profissionais e técnicas atualizadas. Adicione
+        os seus procedimentos aqui.</p>
+    </div>
+
+    <div class="servicos-grid">
+      <!-- PROCEDIMENTO 1 -->
+      <div class="servico-card">
+        <div class="servico-num">01</div>
+        <div class="servico-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <circle cx="10" cy="10" r="8" stroke="#C17B6F" stroke-width="1.2" />
+            <circle cx="10" cy="10" r="4" fill="rgba(193,123,111,0.3)" />
+          </svg>
+        </div>
+        <div class="servico-name">Procedimento 1</div>
+        <div class="servico-desc">Descrição do procedimento, para quem é indicado e quais os benefícios esperados.</div>
+        <div class="servico-price">A partir de R$ 000</div>
+      </div>
+
+      <!-- PROCEDIMENTO 2 -->
+      <div class="servico-card">
+        <div class="servico-num">02</div>
+        <div class="servico-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <rect x="3" y="5" width="14" height="10" rx="3" stroke="#C17B6F" stroke-width="1.2" />
+            <path d="M7 5V4a3 3 0 016 0v1" stroke="#C17B6F" stroke-width="1.2" />
+          </svg>
+        </div>
+        <div class="servico-name">Procedimento 2</div>
+        <div class="servico-desc">Descrição do procedimento, para quem é indicado e quais os benefícios esperados.</div>
+        <div class="servico-price">A partir de R$ 000</div>
+      </div>
+
+      <!-- PROCEDIMENTO 3 -->
+      <div class="servico-card">
+        <div class="servico-num">03</div>
+        <div class="servico-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M10 3L3 10l7 7 7-7-7-7z" stroke="#C17B6F" stroke-width="1.2" stroke-linejoin="round" />
+          </svg>
+        </div>
+        <div class="servico-name">Procedimento 3</div>
+        <div class="servico-desc">Descrição do procedimento, para quem é indicado e quais os benefícios esperados.</div>
+        <div class="servico-price">A partir de R$ 000</div>
+      </div>
+
+      <!-- PROCEDIMENTO 4 -->
+      <div class="servico-card">
+        <div class="servico-num">04</div>
+        <div class="servico-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path
+              d="M10 2c-4.4 0-8 3.6-8 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm0 14c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6z"
+              fill="rgba(193,123,111,0.4)" />
+            <path d="M10 7v3l2 2" stroke="#C17B6F" stroke-width="1.2" stroke-linecap="round" />
+          </svg>
+        </div>
+        <div class="servico-name">Procedimento 4</div>
+        <div class="servico-desc">Descrição do procedimento, para quem é indicado e quais os benefícios esperados.</div>
+        <div class="servico-price">A partir de R$ 000</div>
+      </div>
+
+      <!-- PROCEDIMENTO 5 -->
+      <div class="servico-card">
+        <div class="servico-num">05</div>
+        <div class="servico-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M4 16s2-1 4-1 4 2 6 2 4-1 4-1V4s-2 1-4 1-4-2-6-2-4 1-4 1v12z" stroke="#C17B6F" stroke-width="1.2"
+              stroke-linejoin="round" />
+          </svg>
+        </div>
+        <div class="servico-name">Procedimento 5</div>
+        <div class="servico-desc">Descrição do procedimento, para quem é indicado e quais os benefícios esperados.</div>
+        <div class="servico-price">A partir de R$ 000</div>
+      </div>
+
+      <!-- PROCEDIMENTO 6 -->
+      <div class="servico-card">
+        <div class="servico-num">06</div>
+        <div class="servico-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M10 2l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6z" fill="rgba(193,123,111,0.3)" stroke="#C17B6F"
+              stroke-width="1" stroke-linejoin="round" />
+          </svg>
+        </div>
+        <div class="servico-name">Procedimento 6</div>
+        <div class="servico-desc">Descrição do procedimento, para quem é indicado e quais os benefícios esperados.</div>
+        <div class="servico-price">A partir de R$ 000</div>
+      </div>
+    </div>
+
+    <div class="servicos-cta">
+      <a href="https://wa.me/5535999999999?text=Olá%20Glaucia!%20Gostaria%20de%20saber%20mais%20sobre%20os%20procedimentos."
+        class="btn-rose" target="_blank" style="display:inline-flex;">Tirar dúvidas pelo WhatsApp</a>
+      <p class="servicos-note">Atendimento personalizado — informe sua necessidade e recebo a indicação ideal</p>
+    </div>
+  </section>
+
+  <!-- PORTFÓLIO -->
+  <section class="portfolio" id="portfolio">
+    <div class="portfolio-header">
+      <div>
+        <div class="section-label">Resultados reais</div>
+        <h2 class="section-title">Antes e <em>depois</em></h2>
+      </div>
+      <p style="font-size:13px;color:var(--muted);max-width:280px;text-align:right;line-height:1.7;">Adicione aqui as
+        fotos reais das suas clientes (com autorização). É o maior fator de decisão.</p>
+    </div>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <div class="porto-imgs">
+          <div class="porto-half porto-before-bg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="10" fill="rgba(107,94,88,0.3)" />
+            </svg>
+            <span class="porto-label-small">Antes</span>
+          </div>
+          <div class="porto-half porto-after-bg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="10" fill="rgba(193,123,111,0.3)" />
+            </svg>
+            <span class="porto-label-small">Depois</span>
+          </div>
+        </div>
+        <div class="porto-info">
+          <div class="porto-procedure">Procedimento — adicione o nome</div>
+          <div class="porto-sessions">Número de sessões</div>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <div class="porto-imgs">
+          <div class="porto-half porto-before-bg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="10" fill="rgba(107,94,88,0.3)" />
+            </svg>
+            <span class="porto-label-small">Antes</span>
+          </div>
+          <div class="porto-half porto-after-bg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="10" fill="rgba(193,123,111,0.3)" />
+            </svg>
+            <span class="porto-label-small">Depois</span>
+          </div>
+        </div>
+        <div class="porto-info">
+          <div class="porto-procedure">Procedimento — adicione o nome</div>
+          <div class="porto-sessions">Número de sessões</div>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <div class="porto-imgs">
+          <div class="porto-half porto-before-bg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="10" fill="rgba(107,94,88,0.3)" />
+            </svg>
+            <span class="porto-label-small">Antes</span>
+          </div>
+          <div class="porto-half porto-after-bg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="10" fill="rgba(193,123,111,0.3)" />
+            </svg>
+            <span class="porto-label-small">Depois</span>
+          </div>
+        </div>
+        <div class="porto-info">
+          <div class="porto-procedure">Procedimento — adicione o nome</div>
+          <div class="porto-sessions">Número de sessões</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section class="depoimentos" id="depoimentos">
+    <div class="depo-header">
+      <div class="section-label">O que dizem as clientes</div>
+      <h2 class="section-title">Depoimentos <em>reais</em></h2>
+    </div>
+    <div class="depo-grid">
+      <div class="depo-card">
+        <div class="depo-stars">
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+        </div>
+        <p class="depo-text">"Adicione aqui o depoimento real de uma cliente. Quanto mais específico e genuíno, mais
+          confiança passa para quem está decidindo agendar."</p>
+        <div class="depo-author">
+          <div class="depo-avatar">AN</div>
+          <div>
+            <div class="depo-name">Nome da cliente</div>
+            <div class="depo-since">Procedimento realizado</div>
+          </div>
+        </div>
+      </div>
+      <div class="depo-card">
+        <div class="depo-stars">
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+        </div>
+        <p class="depo-text">"Adicione aqui o depoimento real de uma cliente. Quanto mais específico e genuíno, mais
+          confiança passa para quem está decidindo agendar."</p>
+        <div class="depo-author">
+          <div class="depo-avatar">MF</div>
+          <div>
+            <div class="depo-name">Nome da cliente</div>
+            <div class="depo-since">Procedimento realizado</div>
+          </div>
+        </div>
+      </div>
+      <div class="depo-card">
+        <div class="depo-stars">
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+        </div>
+        <p class="depo-text">"Adicione aqui o depoimento real de uma cliente. Quanto mais específico e genuíno, mais
+          confiança passa para quem está decidindo agendar."</p>
+        <div class="depo-author">
+          <div class="depo-avatar">CS</div>
+          <div>
+            <div class="depo-name">Nome da cliente</div>
+            <div class="depo-since">Procedimento realizado</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AGENDAMENTO -->
+  <section class="agendamento" id="contato">
+    <div class="agendamento-left">
+      <div class="section-label">Vamos conversar</div>
+      <h2 class="section-title">Agende sua <em>consulta</em></h2>
+      <p class="sobre-text">Preencha o formulário ao lado e entrarei em contato pelo WhatsApp para confirmar seu
+        horário. Respondo em até 1 hora durante o horário de atendimento.</p>
+      <div class="agenda-info">
+        <div class="agenda-info-item">
+          <div class="agenda-icon">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path d="M9 1C5.7 1 3 3.7 3 7c0 4.5 6 10 6 10s6-5.5 6-10c0-3.3-2.7-6-6-6zm0 8a2 2 0 110-4 2 2 0 010 4z"
+                fill="#C17B6F" />
+            </svg>
+          </div>
+          <div class="agenda-info-text">
+            <strong>Endereço</strong>
+            <span>Adicione seu endereço completo aqui<br>Cidade, Estado</span>
+          </div>
+        </div>
+        <div class="agenda-info-item">
+          <div class="agenda-icon">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <circle cx="9" cy="9" r="7" stroke="#C17B6F" stroke-width="1.2" />
+              <path d="M9 5v4l2.5 2.5" stroke="#C17B6F" stroke-width="1.2" stroke-linecap="round" />
+            </svg>
+          </div>
+          <div class="agenda-info-text">
+            <strong>Horário de atendimento</strong>
+            <span>Segunda a Sexta: 9h às 18h<br>Sábado: 9h às 13h</span>
+          </div>
+        </div>
+        <div class="agenda-info-item">
+          <div class="agenda-icon">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path
+                d="M15 12c-.9-.9-2.3-1.1-3.4-.5l-1.2 1.2c-1.7-.8-3.7-2.8-4.5-4.5L7 7c.6-1.1.4-2.5-.5-3.4L5.1 2.2C4.1 1.2 2.5 1.2 1.7 2.4 1 3.4 1 5.2 2.5 7.7 4 10 6.5 12.7 9.2 14.2c2.5 1.5 4.3 1.5 5.3.8 1.2-.8 1.2-2.3.5-3z"
+                fill="#C17B6F" />
+            </svg>
+          </div>
+          <div class="agenda-info-text">
+            <strong>WhatsApp direto</strong>
+            <span>(35) 99999-0000<br>@glauciabraga.estetica</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="agendamento-right">
+      <div class="form-title">Solicitar agendamento</div>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Nome completo</label>
+          <input type="text" class="form-input" placeholder="Seu nome">
+        </div>
+        <div class="form-group">
+          <label class="form-label">WhatsApp</label>
+          <input type="tel" class="form-input" placeholder="(00) 00000-0000">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Procedimento de interesse</label>
+        <select class="form-select">
+          <option value="">Selecione um procedimento</option>
+          <option>Procedimento 1</option>
+          <option>Procedimento 2</option>
+          <option>Procedimento 3</option>
+          <option>Procedimento 4</option>
+          <option>Procedimento 5</option>
+          <option>Procedimento 6</option>
+          <option>Não sei ainda — quero uma avaliação</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Preferência de dia</label>
+          <select class="form-select">
+            <option>Sem preferência</option>
+            <option>Segunda-feira</option>
+            <option>Terça-feira</option>
+            <option>Quarta-feira</option>
+            <option>Quinta-feira</option>
+            <option>Sexta-feira</option>
+            <option>Sábado</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Preferência de horário</label>
+          <select class="form-select">
+            <option>Sem preferência</option>
+            <option>Manhã (9h–12h)</option>
+            <option>Tarde (13h–18h)</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Mensagem (opcional)</label>
+        <textarea class="form-textarea" placeholder="Alguma dúvida ou informação adicional?"></textarea>
+      </div>
+      <button class="form-submit" onclick="enviarWhatsApp()">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path
+            d="M13.5 2.5C12.1 1.1 10.2 0.3 8.1 0.3c-4.3 0-7.8 3.5-7.8 7.8 0 1.4.4 2.7 1 3.9L.3 15.7l3.8-.9c1.1.6 2.4.9 3.6.9h.1c4.3 0 7.8-3.5 7.8-7.8-.2-2.1-1-4-2.6-5.4zm-5.4 12c-1.1 0-2.2-.3-3.2-.9l-.2-.1-2.2.6.6-2.2-.2-.2C2.3 10.6 2 9.5 2 8.4c0-3.4 2.8-6.2 6.2-6.2 1.7 0 3.2.6 4.4 1.8 1.2 1.2 1.8 2.7 1.8 4.4-.1 3.3-2.9 6.1-6.3 6.1zm3.4-4.6c-.2-.1-1.1-.5-1.3-.6-.2-.1-.3-.1-.5.1-.1.2-.5.6-.6.8-.1.1-.2.1-.4 0-.2-.1-.8-.3-1.5-.9-.6-.5-1-1.2-1.1-1.4-.1-.2 0-.3.1-.4l.3-.3c.1-.1.1-.2.2-.3 0-.1 0-.2 0-.3-.1-.1-.5-1.1-.6-1.5-.2-.4-.3-.3-.5-.3h-.4c-.1 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.3c.1.1 1.6 2.4 3.8 3.4.5.2.9.4 1.3.5.5.2 1 .1 1.4.1.4-.1 1.3-.5 1.5-1 .2-.5.2-.9.1-1-.1-.1-.2-.1-.3-.2z"
+            fill="white" />
+        </svg>
+        Enviar pelo WhatsApp
+      </button>
+      <p class="form-note">Você será redirecionada para o WhatsApp com as informações preenchidas</p>
+    </div>
+  </section>
+
+  <!-- LOCALIZAÇÃO -->
+  <section class="localizacao">
+    <div>
+      <h2 class="loc-title">Como <em>chegar</em></h2>
+      <p class="loc-sub">Adicione seu endereço completo aqui para que as clientes possam te encontrar facilmente.</p>
+      <div class="loc-details">
+        <div class="loc-item">
+          <div class="loc-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M8 1C5.2 1 3 3.2 3 6c0 4 5 9 5 9s5-5 5-9c0-2.8-2.2-5-5-5zm0 7a2 2 0 110-4 2 2 0 010 4z"
+                fill="#C17B6F" />
+            </svg>
+          </div>
+          <div>
+            <div class="loc-item-title">Endereço</div>
+            <div class="loc-item-val">Rua Exemplo, 000 — Bairro<br>Sua cidade, Estado — CEP 00000-000</div>
+          </div>
+        </div>
+        <div class="loc-item">
+          <div class="loc-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <circle cx="8" cy="8" r="6" stroke="#C17B6F" stroke-width="1" />
+              <path d="M8 5v3l2 2" stroke="#C17B6F" stroke-width="1" stroke-linecap="round" />
+            </svg>
+          </div>
+          <div>
+            <div class="loc-item-title">Horários</div>
+            <div class="loc-item-val">Seg–Sex: 9h às 18h<br>Sábado: 9h às 13h</div>
+          </div>
+        </div>
+        <div class="loc-item">
+          <div class="loc-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path
+                d="M13 10.5c-.8-.8-2-1-3-.5L8.5 11.5C7 10.8 5.2 9 4.5 7.5L6 6c.5-1 .3-2.2-.5-3L4 1.5C3 .5 1.5.5.7 1.7 0 2.7 0 4.5 1.5 7c1.5 2.3 4 5 6.7 6.5 2.5 1.5 4.3 1.5 5.3.8 1.2-.8 1.2-2.3.2-3.3L13 10.5z"
+                fill="#C17B6F" />
+            </svg>
+          </div>
+          <div>
+            <div class="loc-item-title">Contato</div>
+            <div class="loc-item-val">(00) 00000-0000<br>@glauciabraga.estetica</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="loc-map" onclick="window.open('https://maps.google.com','_blank')">
+      <div class="map-pin-icon">
+        <div class="map-pin-inner"></div>
+      </div>
+      <div class="loc-map-label">Mapa — adicione seu endereço no Google Maps</div>
+      <div class="loc-map-cta">Abrir no Google Maps →</div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Glaucia <span>Braga</span> · Esteticista Cosmetóloga</div>
+    <div class="footer-links">
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Procedimentos</a>
+      <a href="#portfolio">Portfólio</a>
+      <a href="#contato">Contato</a>
+      <a href="https://instagram.com" target="_blank">Instagram</a>
+    </div>
+    <div class="footer-copy">© 2025 · Glaucia Braga</div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/5535999999999?text=Olá%20Glaucia!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar."
+    class="wpp-float" target="_blank" title="Chamar no WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+      <path
+        d="M23.6 4.4C21.1 1.9 17.7.3 14 .3 6.4.3.3 6.4.3 14c0 2.4.6 4.8 1.8 6.9L.3 27.7l7-1.8c2 1.1 4.2 1.7 6.5 1.7h.1c7.6 0 13.7-6.1 13.7-13.7 0-3.7-1.5-7.1-4-9.5zm-9.5 21C12 25.4 10 24.8 8.3 24L8 23.8l-4 1 1-3.8-.3-.3C3.5 19.2 3 16.6 3 14 3 8.5 7.5 4 14 4c2.9 0 5.7 1.1 7.7 3.1 2 2 3.1 4.7 3.1 7.7-.1 6.2-5.6 10.6-11.7 10.6zm6-7.9c-.3-.2-2-.9-2.3-1-.3-.1-.5-.2-.8.2-.3.3-.9 1-.7 1.3.1.2.1.3-.2.1-.2-.2-1.5-.5-2.8-1.7-1-.9-1.7-2.1-1.9-2.5-.2-.3 0-.5.1-.7l.5-.6c.1-.2.2-.3.3-.5 0-.2 0-.3-.1-.5-.1-.2-.8-1.9-1.1-2.6-.3-.6-.6-.6-.8-.6h-.7c-.2 0-.6.1-1 .5-.3.4-1.3 1.3-1.3 3.2s1.3 3.7 1.5 3.9c.2.3 2.7 4.2 6.7 5.9.9.4 1.6.7 2.2.9.9.3 1.7.3 2.4.2.7-.2 2.3-1 2.6-1.9.3-.9.3-1.7.2-1.8-.1-.1-.3-.1-.6-.3z"
+        fill="white" />
+    </svg>
+  </a>
+
+  <script>
+    function enviarWhatsApp() {
+      const nome = document.querySelector('input[placeholder="Seu nome"]').value || 'não informado';
+      const tel = document.querySelector('input[placeholder="(00) 00000-0000"]').value || 'não informado';
+      const proc = document.querySelectorAll('select')[0].value || 'não selecionado';
+      const dia = document.querySelectorAll('select')[1].value || 'sem preferência';
+      const hora = document.querySelectorAll('select')[2].value || 'sem preferência';
+      const msg = document.querySelector('textarea').value || '';
+
+      const texto = `Olá Glaucia! Vim pelo site e gostaria de agendar 🌸\n\n👤 *Nome:* ${nome}\n📱 *WhatsApp:* ${tel}\n✨ *Procedimento:* ${proc}\n📅 *Dia preferido:* ${dia}\n🕐 *Horário preferido:* ${hora}${msg ? '\n\n💬 *Mensagem:* ' + msg : ''}`;
+
+      window.open(`https://wa.me/5535999999999?text=${encodeURIComponent(texto)}`, '_blank');
+    }
+  </script>
+
+</body>
+
+</html>
